@@ -13,11 +13,12 @@
         />
         <link rel="stylesheet" href="style.css" />
         <style>
-            .centerImage {
+            .icon {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
                 width: 10%;
+                border: 7px solid rgb(66, 33, 33);
             }
             .center {
                 margin-top: 5%;
@@ -47,6 +48,8 @@
             }
             img {
                 border-radius: 50%;
+                margin-bottom: -7px;
+                border: 3px solid rgb(38, 55, 77);
             }
             div {
                 font-size: 25px;
@@ -57,14 +60,9 @@
         </style>
     </head>
     <body style="background-color: #0d1014" , class="center">
-        <img class="centerImage" src="images/icon.png" alt="logo" />
+        <img class="icon" src="images/icon.png" alt="logo" />
         <div class="text title">Tornfoolery</div>
-        <div class="clock text title" timezone="+8"></div>
-        <br /><br />
-        <div class="text">
-            "I had no idea how to code in html until I decided to try github
-            pages."
-        </div>
+        <div class="text">Just another Roblox developer</div>
         <br /><br />
         <div class="text">Current Project: "Roguebloxin" (29/10/2024)</div>
         <br /><br />
@@ -89,14 +87,18 @@
         </div>
 
         <br /><br />
+
+        <div class="clock text title" timezone="+8"></div>
+        <br /><br />
+
+        <hr class="solid" style="width: 80%;"/>
         <br /><br />
 
         <div class="text title">About me</div>
         <div class="text">
-            <p>Just some Roblox developer</p>
-            <p>4+ years of experience</p>
+            <p>4+ years of experience in Roblox Studio</p>
             <p>Can also script in TypeScript, HTML, JavaScript and Python</p>
-            <p>HTML is pretty cool I guess, learnt it just to make this</p>
+            <p>HTML is pretty cool I guess</p>
         </div>
     </body>
 </html>
@@ -117,7 +119,7 @@
             var currentTime = dateToText(
                 new Date(new Date().getTime() + offset)
             );
-            clock.innerHTML = `GMT+8 ${currentTime}`;
+            clock.innerHTML = `Malaysia | ${currentTime} | GMT+8`;
         }
     }
     function startClocks() {
