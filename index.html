@@ -7,28 +7,137 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
         <style>
-            .pixelify-sans {
-                font-family: "Pixelify Sans", sans-serif;
-                font-optical-sizing: auto;
+            .centerImage {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 10%;
+            }
+            .center {
+                margin-top: 5%;
+                text-align: center;
+            }
+            .text {
+                color: white;
+                font-family: mainFont;
                 font-weight: 500;
                 font-style: normal;
+                /* font-family: "Pixelify Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal; */
             }
-            h1 {
-                text-align: center;
-                color: white;
+            .title {
+                font-size: 60px;
             }
-            p {
-                text-align: center;
+            .clock {
+                font-size: 40px;
+            }
+            a:link {
+                color: rgb(49, 145, 230);
+            }
+            a:visited {
+                color: rgb(145, 204, 255);
+            }
+            img {
+                border-radius: 50%;
             }
             div {
-                text-align: center;
+                font-size: 25px;
+            }
+            p {
+                margin-bottom: -20px;
             }
         </style>
     </head>
-    <body style="background-color: #0d1014">
-        <h1 class="pixelify-sans">Tornfoolery</h1>
-        <p>This is a asd.</p>
-        <div>This is a div.</div>
+    <body style="background-color: #0d1014" , class="center">
+        <img class="centerImage" src="images/icon.png" alt="logo" />
+        <div class="text title">Tornfoolery</div>
+        <div class="clock text title" timezone="+8"></div>
+        <br /><br />
+        <div class="text">
+            "I had no idea how to code in html until I decided to try github
+            pages."
+        </div>
+        <br /><br />
+        <div class="text">Current Project: "Roguebloxin" (29/10/2024)</div>
+        <br /><br />
+
+        <div class="text">
+            Discord <img src="images/discord.png" style: "width=30 height=30"> :
+            Tornfoolery
+        </div>
+
+        <div class="text">
+            Youtube <img src="images/youtube.png" style: "width=30 height=30"> :
+            <a href="https://www.youtube.com/@Tornfoolery" target="_blank"
+                >https://www.youtube.com/@tornfoolery</a
+            >
+        </div>
+
+        <div class="text">
+            Github <img src="images/github.png" style: "width=30 height=30"> :
+            <a href="https://github.com/Tornfoolery" target="_blank"
+                >https://github.com/Tornfoolery</a
+            >
+        </div>
+
+        <br /><br />
+        <br /><br />
+
+        <div class="text title">About me</div>
+        <div class="text">
+            <p>Just some Roblox developer</p>
+            <p>4+ years of experience</p>
+            <p>Can also script in TypeScript, HTML, JavaScript and Python</p>
+            <p>HTML is pretty cool I guess, learnt it just to make this</p>
+        </div>
     </body>
 </html>
+
+<script>
+    function dateToText(date) {
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        if (minutes < 10) minutes = "0" + minutes;
+        if (hours < 10) hours = "0" + hours;
+        return hours + ":" + minutes + ":" + seconds;
+    }
+    function updateClocks() {
+        for (var i = 0; i < window.arrClocks.length; i++) {
+            var clock = window.arrClocks[i];
+            var offset = window.arrOffsets[i];
+            var currentTime = dateToText(
+                new Date(new Date().getTime() + offset)
+            );
+            clock.innerHTML = `GMT+8 ${currentTime}`;
+        }
+    }
+    function startClocks() {
+        clockElements = document.getElementsByClassName("clock");
+        window.arrClocks = [];
+        window.arrOffsets = [];
+        var j = 0;
+        for (var i = 0; i < clockElements.length; i++) {
+            el = clockElements[i];
+            timezone = parseInt(el.getAttribute("timezone"));
+            if (!isNaN(timezone)) {
+                var tzDifference =
+                    timezone * 60 + new Date().getTimezoneOffset();
+                var offset = tzDifference * 60 * 1000;
+                window.arrClocks.push(el);
+                window.arrOffsets.push(offset);
+            }
+        }
+        updateClocks();
+        clockID = setInterval(updateClocks, 1000);
+    }
+    setTimeout(startClocks, 100);
+</script>
