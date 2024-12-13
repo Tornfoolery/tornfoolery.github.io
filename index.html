@@ -1,108 +1,238 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>About Tornfoolery</title>
-        <link rel="icon" type="image/png" href="images/icon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <style>
-            .icon {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 10%;
-                border: 7px solid rgb(66, 33, 33);
-            }
-            .center {
-                margin-top: 5%;
-                text-align: center;
-            }
-            .text {
-                color: white;
-                font-family: mainFont;
-                font-weight: 500;
-                font-style: normal;
-                /* font-family: "Pixelify Sans", sans-serif;
+<head">
+    <title>About Tornfoolery</title>
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .icon {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10%;
+            border: 7px solid rgb(66, 33, 33);
+        }
+
+        .center {
+            margin-top: 5%;
+            text-align: center;
+        }
+
+        .left {
+            margin-left: 5%;
+            text-align: left;
+        }
+
+        .text {
+            color: white;
+            font-family: mainFont;
+            font-weight: 500;
+            font-style: normal;
+            /* font-family: "Pixelify Sans", sans-serif;
                 font-optical-sizing: auto;
                 font-weight: 600;
                 font-style: normal; */
-            }
-            .title {
-                font-size: 60px;
-            }
-            .clock {
-                font-size: 40px;
-            }
-            a:link {
-                color: rgb(49, 145, 230);
-            }
-            a:visited {
-                color: rgb(145, 204, 255);
-            }
-            img {
-                border-radius: 50%;
-                margin-bottom: -7px;
-                border: 3px solid rgb(38, 55, 77);
-            }
-            div {
-                font-size: 25px;
-            }
-            p {
-                margin-bottom: -20px;
-            }
-        </style>
+        }
+
+        .title {
+            font-size: 60px;
+        }
+
+        .clock {
+            font-size: 40px;
+        }
+
+        a:link {
+            color: rgb(49, 145, 230);
+        }
+
+        a:visited {
+            color: rgb(145, 204, 255);
+        }
+
+        img {
+            border-radius: 50%;
+            margin-bottom: -7px;
+            border: 3px solid rgb(38, 55, 77);
+        }
+
+        div {
+            font-size: 25px;
+        }
+
+        p {
+            margin-bottom: -20px;
+        }
+
+        .discord-button {
+            display: inline-block;
+            font-size: large;
+            border-radius: 3px;
+            cursor: pointer;
+            height: 45px;
+            width: 250px;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+            background-color: #7289da;
+            border: 2px solid #7289da;
+            color: #fff;
+
+            transform: scale(1);
+            transition-duration: 0.5s;
+
+            text-align: center;
+            text-indent: 15%;
+
+            font-weight: 1000;
+        }
+
+        .youtube-button {
+            display: inline-block;
+            font-size: large;
+            border-radius: 3px;
+            cursor: pointer;
+            height: 45px;
+            width: 250px;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+            background-color: #ff2020;
+            border: 2px solid #941313;
+            color: #fff;
+
+            transform: scale(1);
+            transition-duration: 0.5s;
+
+            text-align: center;
+            text-indent: 15%;
+
+            font-weight: 1000;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
+
+        .btnimg {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+        }
+    </style>
     </head>
+
     <body style="background-color: #0d1014" , class="center">
         <img class="icon" src="images/icon.png" alt="logo" />
         <div class="text title">Tornfoolery</div>
         <div class="text">Just another Roblox developer</div>
         <br /><br />
-        <div class="text">Current Project: "Roguebloxin" (29/10/2024)</div>
-        <br /><br />
-
-        <div class="text">
-            Discord <img src="images/discord.png" style: "width=30 height=30"> :
-            Tornfoolery
-        </div>
-
-        <div class="text">
-            Youtube <img src="images/youtube.png" style: "width=30 height=30"> :
-            <a href="https://www.youtube.com/@Tornfoolery" target="_blank"
-                >https://www.youtube.com/@tornfoolery</a
-            >
-        </div>
-
-        <div class="text">
-            Github <img src="images/github.png" style: "width=30 height=30"> :
-            <a href="https://github.com/Tornfoolery" target="_blank"
-                >https://github.com/Tornfoolery</a
-            >
-        </div>
-
-        <br /><br />
-
         <div class="clock text title" timezone="+8"></div>
         <br /><br />
 
-        <hr class="solid" style="width: 80%;"/>
+        <div style="display: flex; justify-content: space-evenly">
+            <button class="discord-button button text" style="margin-left: 35%;" onclick="window.open('https://discord.gg/uKkqPCFqwy', '_blank')"> <img class="btnimg" src="images/discord.png" alt="" />Discord Server</button>
+            <button class="youtube-button button text" style="margin-right: 35%;" onclick="window.open('https://www.youtube.com/@tornfoolery', '_blank')"> <img class="btnimg" src="images/youtube.png" alt="" />Youtube Channel</button>
+        </div>
+
+        <br /><br />
+        <hr class="solid" style="width: 90%;" />
+        <br /><br />
+
+        <div class="text title">Projects</div>
+
+        <div style="display: flex; justify-content: space-evenly; margin-right: 5%;">
+            <p class="text" style="margin-right: 5%;"> <a
+                    href="https://youtube.com/playlist?list=PLRV2ASbK81H19xXTCRn6Lx4PliOzs7srH&si=12dWZkQlujV32UYU"
+                    target="_blank">Dummy Defense Playlist [2024]:</a></p>
+
+            <p class="text" style="margin-right: 5%;"> <a href="https://www.youtube.com/watch?v=by1qciAXCvY"
+                    target="_blank">Judgement Cut End [2023]:</a></p>
+
+            <p class="text"> <a href="https://devforum.roblox.com/t/tools-handler-handle-your-tools-easily/2686188"
+                    target="_blank">Tools Handler [2023]:</a></p>
+
+        </div>
+
+        <br /><br />
+
+        <div style="display: flex; justify-content: space-evenly">
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5Q4jlvIDkGE?si=eW6zNqamEXwp9v4D"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/by1qciAXCvY?si=ZtL7FQU-SpPv22Uh"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LV3mAc_Ef9c?si=DnkzRDTfDMObm3WG"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+<!-- 
+        <br /><br />
+
+        <div>
+            <p class="text"> <a href="https://www.roblox.com/games/9380422019/Ultradie" target="_blank">Advanced
+                    Movement System [2022]</a></p>
+
+            <p class="text"> <a href="https://www.roblox.com/games/7902930783/Abilities-System" target="_blank">Ability
+                    System [2021]</a></p>
+
+            <p class="text"> <a href="https://www.roblox.com/games/6507081997/Left-4-Blox-Open-Beta-Testing"
+                    target="_blank">Global Server List [2021]</a></p>
+
+        </div> -->
+
+        <br /><br />
+
+        <br /><br />
+        <hr class="solid" style="width: 90%;" />
         <br /><br />
 
         <div class="text title">About me</div>
         <div class="text">
             <p>4+ years of experience in Roblox Studio</p>
             <p>Can also script in TypeScript, HTML, JavaScript and Python</p>
-            <p>HTML is pretty cool I guess</p>
+            <p>Find more of my past works by contacting me!</p>
         </div>
+
+        <br /><br />
+        <hr class="solid" style="width: 90%;" />
+        <br /><br />
+
+        <div class="text title">Contact Me</div>
+
+        <div class="text">
+            Discord <img src="images/discord.png" style: "width=30 height=30"> :
+            <a href="https://discord.gg/uKkqPCFqwy" target="_blank"> https://discord.gg/uKkqPCFqwyy</a>
+        </div>
+
+        <div class="text">
+            Youtube <img src="images/youtube.png" style: "width=30 height=30"> :
+            <a href="https://www.youtube.com/@Tornfoolery" target="_blank">https://www.youtube.com/@tornfoolery</a>
+        </div>
+
+        <div class="text">
+            Github <img src="images/github.png" style: "width=30 height=30"> :
+            <a href="https://github.com/Tornfoolery" target="_blank">https://github.com/Tornfoolery</a>
+        </div>
+
+        <br /><br />
+        <br /><br />
     </body>
+
 </html>
 
 <script>
