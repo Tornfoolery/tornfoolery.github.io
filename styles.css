@@ -1,0 +1,211 @@
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    border: 7px solid rgb(66, 33, 33);
+    border-radius: 100%;
+}
+
+.text {
+    font-family: "Jersey 10", serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 200%;
+
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 0.3px rgb(22, 23, 51);
+}
+
+body {
+    background-color: rgb(39, 39, 56);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer */
+
+footer {
+    padding: 20px;
+    margin: 20px 0 0 0;
+    height: 75px;
+    background-color: rgba(0, 0, 15, 0.5);
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    height: 75px;
+    background-color: rgba(26, 25, 37);
+    text-align: center;
+
+    opacity: 1;
+    transition: 0.3s;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    margin: auto;
+    margin-left: 5%;
+
+    font-size: 150%;
+}
+
+header li a:after {
+    content: "";
+    position: absolute;
+
+    background-color: white;
+
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    bottom: -5px;
+    transition: 0.2s;
+}
+
+header li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    margin-top: 100px;
+}
+
+header.hide {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* Reviews */
+div.reviews {
+    padding: 1% 5% 0% 5%;
+    margin: 0 2% 0;
+    background-color: rgb(26, 25, 37);
+}
+
+h1.reviews {
+    display: inline-block;
+    text-align: left;
+    color: white;
+
+    font-size: 500%;
+}
+
+h2.reviews {
+    display: inline;
+    text-align: left;
+    margin: 0;
+    font-size: 250%;
+    color: white;
+}
+
+img.jeff {
+    margin: 0 0 0 2%;
+    display: inline-block;
+    width: 10%;
+    height: 10%;
+}
+
+/* About */
+h1.about {
+    display: inline;
+    text-align: left;
+    font-size: 500%;
+}
+
+h2.about {
+    font-size: 250%;
+}
+
+div.about {
+    padding: 1% 5% 3% 5%;
+    margin: 2%;
+    background-color: rgb(26, 25, 37);
+}
+
+/* Showcase */
+div.showcases {
+    padding: 1% 5% 0% 5%;
+    margin: 2% 2% 0 2%;
+    background-color: rgb(26, 25, 37);
+}
+
+h1.showcases {
+    display: inline;
+    text-align: left;
+    font-size: 500%;
+}
+
+h2.showcase {
+    text-align: center;
+    font-size: 250%;
+}
+
+section.showcase {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+}
+
+div.showcase {
+    margin: auto;
+}
+
+/* Other Games */
+div.games {
+    padding: 5% 0% 3% 5%;
+    margin: 0 2% 2% 2%;
+    background-color: rgb(26, 25, 37);
+}
+
+/* Contributions */
+div.contributions {
+    padding: 1% 5% 3% 5%;
+    margin: 2%;
+    background-color: rgb(26, 25, 37);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+}
+
+h2.game {
+    text-align: left;
+    font-size: 100%;
+}
+
+h2.game a:visited {
+    color: rgb(192, 230, 255);
+}
+
+h2.game a:link {
+    color: rgb(192, 230, 255);
+}
+
+/* Contacts */
+img.contacts {
+    display: inline-block;
+    width: 5%;
+    margin-left: 1%;
+}
+
+/* General */
+html {
+    scroll-behavior: smooth;
+}

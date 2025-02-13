@@ -1,161 +1,250 @@
 <!DOCTYPE html>
-<html>
-<head">
-    <title>About Tornfoolery</title>
-    <link rel="icon" type="image/png" href="images/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+<html lang="en">
+    <head>
+        <title>Tornfoolery</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+            rel="stylesheet"
+        />
+
+        <script src="index.js" type="module"></script>
+
+        <link rel="stylesheet" href="styles.css" />
     </head>
 
-    <body style="background-color: #0d1014" , class="center">
-        <img class="icon" src="images/icon.png" alt="logo" />
-        <div class="text title">Tornfoolery</div>
-        <div class="text">Just another Roblox developer</div>
-        <br /><br />
-        <div class="clock text title" timezone="+8"></div>
-        <br /><br />
+    <body>
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#about" class="text">About</a></li>
+                    <li><a href="#showcases" class="text">Showcases</a></li>
+                    <li>
+                        <a href="#contributions" class="text">Contributions</a>
+                    </li>
+                    <li><a href="#reviews" class="text">Reviews</a></li>
+                    <li><a href="#contacts" class="text">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br />
 
-        <div style="display: flex; justify-content: space-evenly">
-            <button class="discord-button button text" style="margin-left: 35%;" onclick="window.open('https://discord.gg/uKkqPCFqwy', '_blank')"> <img class="btnimg" src="images/discord.png" alt="" />Discord Server</button>
-            <button class="youtube-button button text" style="margin-right: 35%;" onclick="window.open('https://www.youtube.com/@tornfoolery', '_blank')"> <img class="btnimg" src="images/youtube.png" alt="" />Youtube Channel</button>
-        </div>
-
-        <br /><br />
-        <hr class="solid" style="width: 90%;" />
-        <br /><br />
-
-        <div class="text title">Projects</div>
-
-        <div style="display: flex; justify-content: space-evenly; margin-right: 5%;">
-            <p class="text" style="margin-left: 2.5%;"> <a
-                    href="https://youtube.com/playlist?list=PLRV2ASbK81H19xXTCRn6Lx4PliOzs7srH&si=12dWZkQlujV32UYU"
-                    target="_blank">Dummy Defense Playlist [2024]:</a></p>
-
-            <p class="text" style="margin-left: 7.5%;"> <a href="https://www.youtube.com/watch?v=by1qciAXCvY"
-                    target="_blank">Judgement Cut End [2023]:</a></p>
-
-            <p class="text" style="margin-left: 10%;"> <a href="https://devforum.roblox.com/t/tools-handler-handle-your-tools-easily/2686188"
-                    target="_blank">Tools Handler [2023]:</a></p>
-
-        </div>
-
-        <br /><br />
-
-        <div style="display: flex; justify-content: space-evenly">
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/5Q4jlvIDkGE?si=eW6zNqamEXwp9v4D"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/by1qciAXCvY?si=ZtL7FQU-SpPv22Uh"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LV3mAc_Ef9c?si=DnkzRDTfDMObm3WG"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-        </div>
-
-        <br /><br />
-
-        <br /><br />
-        <hr class="solid" style="width: 90%;" />
-        <br /><br />
-
-        <div style="display: flex; justify-content: space-evenly">
-            <div class="text title" style="margin-left: 15%;">About me:</div>
-            <div class="text title" style="margin-left: 12%;">What I Specialize In:</div>
-        </div>
-
-        <div style="display: flex; justify-content: space-evenly">
-            <div class="text">
-                <p>4+ years of experience in Roblox Studio</p>
-                <p>Can also script in TypeScript, HTML, JavaScript and Python</p>
-                <p>Find more of my past works by contacting me!</p>
-            </div>
-
-            <div class="text">
-                <p>• Typescript, Lua</p>
-                <p>• Front-end and Back-end scripting</p>
-                <p>• Fully customizable and modular systems</p>
+        <div class="about">
+            <img class="icon" src="images/logo.png" alt="logo" />
+            <h1
+                class="text"
+                style="font-size: 500%; text-align: center; margin-top: 0"
+            >
+                Tornfoolery
+            </h1>
+            <div
+                class="clock text"
+                timezone="+8"
+                style="font-size: 500%; text-align: center; margin: -3%"
+            >
+                sup
             </div>
         </div>
 
-        <br /><br />
-        
-        <br /><br />
-        <hr class="solid" style="width: 90%;" />
-        <br /><br />
-        
-        <div class="text title">Contact Me</div>
+        <section id="about">
+            <div class="about">
+                <h1 class="text about">About</h1>
+                <h2 class="text about">
+                    Wassup im Torn i'm a roblox developer that has 5 years+ of
+                    experience, I can script in both TypeScript and Lua for
+                    Roblox! <br />Over these 5 years I have been commissioned in
+                    hundreds of games whilst working on a few of my personal
+                    projects <br />I specialize in making fast and high quality
+                    games that will always satisfy your requests <br />
+                </h2>
+            </div>
+        </section>
 
-        <div class="text">
-            Discord <img src="images/discord.png" style: "width=30 height=30"> :
-            <a href="https://discord.gg/uKkqPCFqwy" target="_blank"> https://discord.gg/uKkqPCFqwyy</a>
-        </div>
+        <section id="showcases">
+            <div class="showcases">
+                <h1 class="text showcases">Showcases</h1>
+                <section class="showcase">
+                    <div class="showcase">
+                        <h2 class="text showcase">Roguebusters [2025]</h2>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/tbvn5VJ7WqI?si=silB9BjlKarHIs15"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
-        <div class="text">
-            Youtube <img src="images/youtube.png" style: "width=30 height=30"> :
-            <a href="https://www.youtube.com/@Tornfoolery" target="_blank">https://www.youtube.com/@tornfoolery</a>
-        </div>
+                    <div class="showcase">
+                        <h2 class="text showcase">Defend The Dummy [2024]</h2>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/5Q4jlvIDkGE?si=eW6zNqamEXwp9v4D"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
 
-        <div class="text">
-            Github <img src="images/github.png" style: "width=30 height=30"> :
-            <a href="https://github.com/Tornfoolery" target="_blank">https://github.com/Tornfoolery</a>
-        </div>
+                    <div class="showcase">
+                        <h2 class="text showcase">Judgement Cut End [2023]</h2>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/by1qciAXCvY?si=ZtL7FQU-SpPv22Uh"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </section>
 
-        <br /><br />
-        <br /><br />
+                <section class="showcase">
+                    <div class="showcase">
+                        <h2 class="text showcase">Tools Handler [2023]</h2>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/LV3mAc_Ef9c?si=DnkzRDTfDMObm3WG"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </section>
+            </div>
+
+            <div class="games">
+                <h1 class="text showcases">Other games:</h1>
+                <br />
+                <h3 class="text showcases">
+                    Other games that I own or fully worked on:
+                </h3>
+                <h2 class="game">
+                    <a
+                        target="_blank"
+                        class="text"
+                        href="https://www.roblox.com/games/103589314763939/Roguebusters-BETA"
+                        >Roguebusters [2025]</a
+                    >
+
+                    <a
+                        target="_blank"
+                        class="text"
+                        href="https://www.roblox.com/games/72814359101534/Custom-Character-Controller"
+                        >Custom Character Controller [2025]</a
+                    >
+
+                    <a
+                        target="_blank"
+                        class="text"
+                        href="https://www.roblox.com/games/15512036204/Dummy-Defense"
+                        >Dummy Defense [2024]</a
+                    >
+
+                    <a
+                        target="_blank"
+                        class="text"
+                        href="https://www.roblox.com/games/16364271270/Average-Pizzeria-Game-Fixed-version"
+                        >Average pixeria game [2024]</a
+                    >
+
+                    <a
+                        target="_blank"
+                        class="text"
+                        href="https://www.roblox.com/games/18531210374/Beta-Voice-Battler"
+                        >Voice battles [2024]</a
+                    >
+                </h2>
+            </div>
+        </section>
+
+        <section id="contributions">
+            <div class="contributions">
+                <h1 class="text showcases">Contributions</h1>
+                <h3 class="text showcases">
+                    Some popular games that I have greatly contributed to:
+                </h3>
+                <h2 class="game">
+                    <a
+                        target="_blank"
+                        class="text"
+                        href="https://www.roblox.com/games/101863423902563/Carry-a-Baby-2-Player-Obby"
+                        >Carry a Baby [2 Player Obby] [2M visits]</a
+                    >
+
+                    <a
+                        target="_blank"
+                        class="text"
+                        href="https://www.roblox.com/games/137949161962313/100-Player-Rock-Climbing"
+                        >100 Player Rockclimbing [10k visits]</a
+                    >
+                </h2>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <div class="reviews">
+                <h1 class="text showcases">Reviews</h1>
+                <h3 class="text showcases">
+                    Still not impressed? Just listen to what our very satisifed
+                    customers have to say about it!
+                </h3>
+
+                <div class="reviews">
+                    <img class="jeff" src="images/bacon.png" ; />
+                    <h2 class="text reviews">
+                        "Torn is pretty cool" - Jeff <br />(photo of jeff)
+                    </h2>
+                </div>
+
+                <div class="reviews">
+                    <img class="jeff" src="images/bacon.png" ; />
+                    <h2 class="text reviews">
+                        "Really the best dev haha" - Jeff <br />(another picture
+                        of jeff)
+                    </h2>
+                </div>
+            </div>
+
+            <div class="reviews">
+                <h4 class="text about">I will add real ones soon</h4>
+                <br />
+            </div>
+        </section>
+
+        <section id="contacts">
+            <div class="contributions">
+                <h1 class="text showcases">Contacts</h1>
+                <h3 class="text showcases">
+                    Contact me for any assistance or questions!
+                </h3>
+
+                <a target="_blank" href="https://discord.gg/uKkqPCFqwy"
+                    ><img
+                        src="images/discord.png"
+                        alt="image"
+                        class="contacts"
+                        style="border-radius: 100%"
+                /></a>
+
+                <a target="_blank" href="https://discord.gg/uKkqPCFqwy"
+                    ><img src="images/roblox.png" alt="image" class="contacts"
+                /></a>
+            </div>
+        </section>
+
+        <footer></footer>
     </body>
-
 </html>
-
-<script>
-    function dateToText(date) {
-        var hours = date.getHours();
-        var minutes = date.getMinutes();
-        var seconds = date.getSeconds();
-        if (minutes < 10) minutes = "0" + minutes;
-        if (hours < 10) hours = "0" + hours;
-        return hours + ":" + minutes + ":" + seconds;
-    }
-    function updateClocks() {
-        for (var i = 0; i < window.arrClocks.length; i++) {
-            var clock = window.arrClocks[i];
-            var offset = window.arrOffsets[i];
-            var currentTime = dateToText(
-                new Date(new Date().getTime() + offset)
-            );
-            clock.innerHTML = `Malaysia | ${currentTime} | GMT+8`;
-        }
-    }
-    function startClocks() {
-        clockElements = document.getElementsByClassName("clock");
-        window.arrClocks = [];
-        window.arrOffsets = [];
-        var j = 0;
-        for (var i = 0; i < clockElements.length; i++) {
-            el = clockElements[i];
-            timezone = parseInt(el.getAttribute("timezone"));
-            if (!isNaN(timezone)) {
-                var tzDifference =
-                    timezone * 60 + new Date().getTimezoneOffset();
-                var offset = tzDifference * 60 * 1000;
-                window.arrClocks.push(el);
-                window.arrOffsets.push(offset);
-            }
-        }
-        updateClocks();
-        clockID = setInterval(updateClocks, 1000);
-    }
-    setTimeout(startClocks, 100);
-</script>
