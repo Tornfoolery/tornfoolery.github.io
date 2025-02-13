@@ -157,6 +157,7 @@ h2.showcase {
 }
 
 section.showcase {
+    min-width: 560px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
