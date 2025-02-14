@@ -80,15 +80,6 @@ li {
     display: flex;
 }
 
-.firstlogo {
-    display: flex;
-    min-width: 20px;
-    width: 7%;
-    height: 50%;
-    padding-right: 25px;
-    border-radius: 100%;
-}
-
 .firstli {
     margin-right: auto;
 }
