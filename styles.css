@@ -67,8 +67,8 @@ ul {
     margin: 0 1% 0 5%;
 
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 
     list-style-type: none;
     gap: 25px;
@@ -78,10 +78,6 @@ li {
     font-size: 1.3vw;
 
     display: flex;
-}
-
-.firstli {
-    margin-right: auto;
 }
 
 header li a:after {
