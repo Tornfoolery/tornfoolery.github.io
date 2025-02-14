@@ -52,50 +52,22 @@ function startClocks() {
 
 setTimeout(startClocks, 100);
 
-// Animations
-// Register ScrollTrigger plguin
-gsap.registerPlugin(ScrollTrigger);
+// Scroll fade
+let lastScroll;
 
-// Prevent flash of unstyled content before animation loads
-gsap.set("[text-anim]", { opacity: 1 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Split text into words and characters, wrapping them in span tags
-    document.querySelectorAll("[text-anim]").forEach((el) => {
-        new SplitType(el, {
-            types: "words, chars",
-            tagName: "span",
-        });
+const observer = new IntersectionObserver((entries) => {
+    var currentScroll = document.documentElement.scrollTop;
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        } else if (currentScroll <= lastScroll) {
+            entry.target.classList.remove("show");
+        }
     });
-
-    document.querySelectorAll("[text-anim]").forEach((el) => {
-        let tl = gsap.timeline({ paused: true });
-        tl.from(el.querySelectorAll(".char"), {
-            opacity: 0,
-            duration: 1,
-            ease: "power1.out",
-            stagger: { amount: 0.2 },
-        });
-        tl.play();
-        createScrollTrigger(el, tl);
-    });
+    lastScroll = currentScroll;
 });
 
-function createScrollTrigger(triggerElement, timeline) {
-    ScrollTrigger.create({
-        trigger: triggerElement,
-
-        start: "top bottom",
-        onLeaveBack: () => {
-            timeline.progress(0).pause();
-        },
-    });
-
-    ScrollTrigger.create({
-        trigger: triggerElement,
-        start: "top 80%",
-        onEnter: () => {
-            timeline.play();
-        },
-    });
-}
+const elements = document.querySelectorAll("section");
+elements.forEach((element) => {
+    observer.observe(element);
+});

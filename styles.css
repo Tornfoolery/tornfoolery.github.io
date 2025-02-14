@@ -1,13 +1,15 @@
-/* Text Split */
-[text-anim] {
+/* Animations */
+section {
     opacity: 0;
+    filter: blur(5px);
+    transform: translateY(50%);
+    transition: all 1s;
 }
 
-.word {
-    overflow: hidden;
-    padding-bottom: 0.1em;
-    margin-bottom: -0.1em;
-    transform-origin: bottom;
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
 .icon {
@@ -52,25 +54,43 @@ header {
     position: sticky;
     top: 0;
     padding: 20px;
-    height: 75px;
     background-color: rgba(26, 25, 37);
-    text-align: center;
+
+    height: 3vw;
 
     opacity: 1;
     transition: 0.3s;
+    z-index: 1000;
 }
 
 ul {
-    padding: 0;
-    list-style: none;
+    margin: 0 1% 0 5%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    list-style-type: none;
+    gap: 25px;
 }
 
 li {
-    display: inline-block;
-    margin: auto;
-    width: 15%;
+    font-size: 1.3vw;
 
-    font-size: 150%;
+    display: flex;
+}
+
+.firstlogo {
+    display: flex;
+    min-width: 20px;
+    width: 7%;
+    height: 50%;
+    padding-right: 25px;
+    border-radius: 100%;
+}
+
+.firstli {
+    margin-right: auto;
 }
 
 header li a:after {
@@ -95,7 +115,6 @@ header a {
     color: white;
     text-decoration: none;
     position: relative;
-    margin-top: 100px;
 }
 
 header.hide {
