@@ -1,3 +1,15 @@
+/* Text Split */
+[text-anim] {
+    opacity: 0;
+}
+
+.word {
+    overflow: hidden;
+    padding-bottom: 0.1em;
+    margin-bottom: -0.1em;
+    transform-origin: bottom;
+}
+
 .icon {
     display: block;
     margin-left: auto;

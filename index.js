@@ -1,3 +1,4 @@
+// Header
 var lastScrollTop = 0;
 var header = document.getElementById("header");
 
@@ -12,6 +13,7 @@ window.onscroll = function () {
     lastScrollTop = currentScrollTop;
 };
 
+// Clock
 function dateToText(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -45,7 +47,55 @@ function startClocks() {
         }
     }
     updateClocks();
-    clockID = setInterval(updateClocks, 1000);
+    setInterval(updateClocks, 1000);
 }
 
 setTimeout(startClocks, 100);
+
+// Animations
+// Register ScrollTrigger plguin
+gsap.registerPlugin(ScrollTrigger);
+
+// Prevent flash of unstyled content before animation loads
+gsap.set("[text-anim]", { opacity: 1 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Split text into words and characters, wrapping them in span tags
+    document.querySelectorAll("[text-anim]").forEach((el) => {
+        new SplitType(el, {
+            types: "words, chars",
+            tagName: "span",
+        });
+    });
+
+    document.querySelectorAll("[text-anim]").forEach((el) => {
+        let tl = gsap.timeline({ paused: true });
+        tl.from(el.querySelectorAll(".char"), {
+            opacity: 0,
+            duration: 1,
+            ease: "power1.out",
+            stagger: { amount: 0.2 },
+        });
+        tl.play();
+        createScrollTrigger(el, tl);
+    });
+});
+
+function createScrollTrigger(triggerElement, timeline) {
+    ScrollTrigger.create({
+        trigger: triggerElement,
+
+        start: "top bottom",
+        onLeaveBack: () => {
+            timeline.progress(0).pause();
+        },
+    });
+
+    ScrollTrigger.create({
+        trigger: triggerElement,
+        start: "top 80%",
+        onEnter: () => {
+            timeline.play();
+        },
+    });
+}
